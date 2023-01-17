@@ -182,7 +182,7 @@
 		0A4D95182486BD1B001C4293 = {
 			isa = PBXGroup;
 			children = (
-				0A4D95232486BD1B001C4293 /* Pomosh */,
+				0A4D95232486BD1B001C4293 /* 	 */,
 				0AB6640D2487DA0E00548CC8 /* Pomosh Watch */,
 				0AB6641C2487DA1200548CC8 /* Pomosh Watch Extension */,
 				0A4D95222486BD1B001C4293 /* Products */,
@@ -200,7 +200,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0A4D95232486BD1B001C4293 /* Pomosh */ = {
+		0A4D95232486BD1B001C4293 /* 	 */ = {
 			isa = PBXGroup;
 			children = (
 				0AB6644624883C8600548CC8 /* PomoshDebug.entitlements */,
@@ -224,7 +224,7 @@
 				0A4D95432486C2E2001C4293 /* Button.swift */,
 				0A4D954A2486CA2B001C4293 /* SettingsView.swift */,
 			);
-			path = Pomosh;
+			path = "	";
 			sourceTree = "<group>";
 		};
 		0A4D952F2486BD1F001C4293 /* Preview Content */ = {
