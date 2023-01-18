@@ -12,14 +12,14 @@ import UIKit
 
 class PomoshTimer: ObservableObject {
     // MARK: - Default Variables
-
-    @Published var fulltime: Int = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200 {
+    
+    @Published var fulltime: Int = UserDefaults.standard.optionalInt(forKey: "time") ?? 1500 {
         didSet {
             settings.set(fulltime, forKey: "time")
         }
     }
 
-    @Published var fullBreakTime: Int = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 600 {
+    @Published var fullBreakTime: Int = UserDefaults.standard.optionalInt(forKey: "fullBreakTime") ?? 300 {
         didSet {
             settings.set(fullBreakTime, forKey: "fullBreakTime")
         }
@@ -39,12 +39,22 @@ class PomoshTimer: ObservableObject {
 
     @Published var longBreakRound: Int = UserDefaults.standard.optionalInt(forKey: "longBreakRound") ?? 4 {
         didSet {
-            settings.set(fullround, forKey: "longBreakRound")
+            settings.set(longBreakRound, forKey: "longBreakRound")
+        }
+    }
+    
+    @Published var todayTime: Int = UserDefaults.standard.optionalInt(forKey: "today") ?? 0 {
+        didSet {
+            settings.set(todayTime, forKey: "today")
+        }
+    }
+    @Published var totalTime: Int = UserDefaults.standard.optionalInt(forKey: "totalTime") ?? 0 {
+        didSet {
+            settings.set(todayTime, forKey: "totalTime")
         }
     }
 
     // MARK: - Active Variables
-
     @Published var timeRemaining = 0
     @Published var breakTime = 0
     @Published var round = 0
@@ -120,10 +130,12 @@ class PomoshTimer: ObservableObject {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
     }
+    
+   
 
     // MARK: - Int to Human Readable Time String
 
-    func textForPlaybackTime(time: TimeInterval) -> String {
+func textForPlaybackTime(time: TimeInterval) -> String {
         if !time.isNormal {
             return "00:00"
         }
@@ -137,4 +149,20 @@ class PomoshTimer: ObservableObject {
             return minutesAndSeconds
         }
     }
+    
+    
+    func textForTimer(time: TimeInterval) -> String {
+            if !time.isNormal {
+                return "0분0초"
+            }
+            let hours = Int(floor(time / 3600))
+            let minutes = Int(floor((time / 60).truncatingRemainder(dividingBy: 60)))
+            let seconds = Int(floor(time.truncatingRemainder(dividingBy: 60)))
+            let minutesAndSeconds = NSString(format: "%02d분%02d초", minutes, seconds) as String
+            if hours > 0 {
+                return NSString(format: "%02d시%@분", hours, minutesAndSeconds) as String
+            } else {
+                return minutesAndSeconds
+            }
+        }
 }

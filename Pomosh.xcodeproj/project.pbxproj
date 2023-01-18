@@ -149,7 +149,6 @@
 		0AB66443248837D900548CC8 /* PomoshRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomoshRelease.entitlements; sourceTree = "<group>"; };
 		0AB6644424883C5F00548CC8 /* Pomosh Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pomosh Watch Extension.entitlements"; sourceTree = "<group>"; };
 		0AB6644524883C7E00548CC8 /* Pomosh Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pomosh Watch.entitlements"; sourceTree = "<group>"; };
-		0AB6644624883C8600548CC8 /* PomoshDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomoshDebug.entitlements; sourceTree = "<group>"; };
 		0AB664472489167B00548CC8 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
 		0AB664492489479B00548CC8 /* session.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = session.wav; sourceTree = "<group>"; };
 		0AB6644E248950E100548CC8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -182,7 +181,7 @@
 		0A4D95182486BD1B001C4293 = {
 			isa = PBXGroup;
 			children = (
-				0A4D95232486BD1B001C4293 /* 	 */,
+				0A4D95232486BD1B001C4293 /* Pomosh */,
 				0AB6640D2487DA0E00548CC8 /* Pomosh Watch */,
 				0AB6641C2487DA1200548CC8 /* Pomosh Watch Extension */,
 				0A4D95222486BD1B001C4293 /* Products */,
@@ -200,10 +199,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0A4D95232486BD1B001C4293 /* 	 */ = {
+		0A4D95232486BD1B001C4293 /* Pomosh */ = {
 			isa = PBXGroup;
 			children = (
-				0AB6644624883C8600548CC8 /* PomoshDebug.entitlements */,
 				0AB66443248837D900548CC8 /* PomoshRelease.entitlements */,
 				0A4D95452486C6C5001C4293 /* Fonts */,
 				0A4D95242486BD1B001C4293 /* AppDelegate.swift */,
@@ -224,7 +222,7 @@
 				0A4D95432486C2E2001C4293 /* Button.swift */,
 				0A4D954A2486CA2B001C4293 /* SettingsView.swift */,
 			);
-			path = "	";
+			path = Pomosh;
 			sourceTree = "<group>";
 		};
 		0A4D952F2486BD1F001C4293 /* Preview Content */ = {

@@ -41,15 +41,15 @@ struct TimerRing: View {
                     .rotationEffect(Angle(degrees: 90))
                     .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                     .shadow(color: Color(#colorLiteral(red: 0.4666666667, green: 0.0862745098, blue: 0.9725490196, alpha: 1)).opacity(0.3), radius: 5 * multiplier, x: 0, y: 5 * multiplier)
-
+                
                 VStack(alignment: .center, spacing: 15) {
                     if self.Timer.isActive {
-                        Text(self.Timer.isBreakActive ? "☕️ Break time" : "🍅 X \(self.Timer.round)")
+                        Text(self.Timer.isBreakActive ? "☕️ 쉬는시간" : "🍅 X \(self.Timer.round)")
                             .foregroundColor(Color("Text"))
                             .font(.custom("Silka Regular", size: isIpad ? 24 : 16))
                             .transition(AnyTransition.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .bottom)).combined(with: .opacity))
                     } else {
-                        Text(self.Timer.round > 0 ? self.Timer.isBreakActive ? "Break stopped" : "Start" : "Create New Session")
+                        Text(self.Timer.round > 0 ? self.Timer.isBreakActive ? "일시정지" : "시작" : "새로운 세션")
                             .foregroundColor(Color("Text"))
                             .font(.custom("Silka Regular", size: isIpad ? 24 : 16))
                             .onTapGesture {
@@ -58,8 +58,8 @@ struct TimerRing: View {
                                         self.Timer.sessionSound()
                                         self.Timer.simpleSuccess()
                                     }
-                                    self.Timer.round = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5
-                                    self.Timer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
+                                    self.Timer.round = UserDefaults.standard.integer(forKey: "fullround")
+                                    self.Timer.timeRemaining = UserDefaults.standard.integer(forKey: "time")
                                 }
                             }
                     }
@@ -117,8 +117,8 @@ struct TimerRing: View {
                         if self.Timer.playSound {
                             self.Timer.sessionSound()
                         }
-                        self.Timer.round = UserDefaults.standard.optionalInt(forKey: "fullround") ?? 5
-                        self.Timer.timeRemaining = UserDefaults.standard.optionalInt(forKey: "time") ?? 1200
+                        self.Timer.round = UserDefaults.standard.integer(forKey: "fullround")
+                        self.Timer.timeRemaining = UserDefaults.standard.integer(forKey: "time")
                     }
                     self.Timer.isActive.toggle()
                     if self.Timer.playSound {
