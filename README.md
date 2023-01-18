@@ -5,22 +5,6 @@
 </div>
 <br>
 
-<p align="center">
-<a href="https://apps.apple.com/us/app/pomosh/id1515791898" target="_blank">
-<img
-      src="https://i.imgur.com/S60a8F3.gif"
-      alt="Pomosh"
-      title="Pomosh | Pomodoro technique asistant for iOS and WatchOS"
-    /></a>
-
-	
-  </p>
-
-
-  <a href="https://www.producthunt.com/posts/pomosh-for-macos?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pomosh-for-macos" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=204674&theme=light" alt="Pomosh for macOS - Your next awesome Pomodoro Timer | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
-
-Looking for macOS version repo? [Pomosh-macOS](https://github.com/stevenselcuk/Pomosh-macOS) 
-
 ## About 🍅 Pomosh
 
 
@@ -41,47 +25,3 @@ A working block and a break count as a cycle. A Cycle with a 25-minute working &
 - Sound effects: A chime effect indicates time is up. You can turn off it off course.
 
 - Written with Swift & SwiftUI
-
-
-[See website for details](https://pomosh.netlify.app/)
-
-## Requirements 🤔
-
-`iOS 13` or  `watchOS 6` 
-
-## Download 🚀
-
-
-[![](https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2020-06-01&kind=iossoftware&bubble=ios_apps)](https://apps.apple.com/us/app/pomosh/id1515791898?mt=8)
-
-## Roadmap 🗺
-
-- [x] Submit to Apple Store!
-- [x] Launch on Producthunt 
-- [x] Pomosh  for iOS
-- [x] Pomosh for Apple Watch
-- [X] Full pomodoro technic support
-
-## Change Log
-
-v.1.0 : Initial release
-
-v.2.0 : Pomodoro improvoments
-
-- Half-background mode without creating background task or time
-- Skip the round
-- Settings view UI changes & added some links
-- Haptic feedbacks
-- Some icon changes
-
-## Notes and Credits 🍍
-
-Special thanks for her feedback to [Heval Hazal Kurt](https://github.com/hevalhazalkurt) 🙌
-
-Some of icons made by Freepik from www.flaticon.com
-
-## Do you like it? 🙌
-
-[![Buy Me A Coffee](https://raw.githubusercontent.com/stevenselcuk/palamut/master/tools/orange_img.png)](https://www.buymeacoffee.com/stevenselcuk)
-
-
